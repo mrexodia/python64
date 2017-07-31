@@ -1,5 +1,7 @@
 # python64
 
+Latest build: [![Build status](https://ci.appveyor.com/api/projects/status/cdvs7klyas7pbxl0?svg=true)](https://ci.appveyor.com/project/mrexodia/python64/artifacts)
+
 Hack to have both python and python64 in your PATH environment variable.
 
 ## Setup
