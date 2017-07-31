@@ -47,14 +47,15 @@ int CALLBACK WinMain(
     RtlSecureZeroMemory(&si, sizeof(si));
     si.cb = sizeof(si);    
     PROCESS_INFORMATION pi;
+    DWORD ExitCode = 1;
     if(CreateProcessW(nullptr, szCommandLine, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi))
     {
         CloseHandle(pi.hThread);
         WaitForSingleObject(pi.hProcess, INFINITE);
+        GetExitCodeProcess(pi.hProcess, &ExitCode);
         CloseHandle(pi.hProcess);
     }
     else
         error(szCommandLine);
-        error(L"CreateProcessW failed...");
-    return 0;
+    return ExitCode;
 }
