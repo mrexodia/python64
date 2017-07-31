@@ -22,7 +22,7 @@ int CALLBACK WinMain(
     GetEnvironmentVariableW(HOMEVAR, szCommandLine, _countof(szCommandLine));
     auto len = lstrlenW(szCommandLine);
     if(!len)
-        error(L"Cannot find " HOMEVAR L" environment variable...");
+        error(L"Make sure to set the " HOMEVAR L" environment variable to your PYTHONHOME");
     if(szCommandLine[len - 1] != L'\\')
         lstrcatW(szCommandLine, L"\\");
     SetEnvironmentVariableW(L"PYTHONHOME", szCommandLine);
