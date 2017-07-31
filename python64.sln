@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26724.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "python64", "python64\python64.vcxproj", "{64235B09-1905-4F89-A41F-12460B277B75}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pip64", "pip64\pip64.vcxproj", "{7ECFC662-85AA-4AC0-95CA-5EA31A74B7AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64235B09-1905-4F89-A41F-12460B277B75}.Release|x86.ActiveCfg = Release|Win32
+		{64235B09-1905-4F89-A41F-12460B277B75}.Release|x86.Build.0 = Release|Win32
+		{7ECFC662-85AA-4AC0-95CA-5EA31A74B7AC}.Release|x86.ActiveCfg = Release|Win32
+		{7ECFC662-85AA-4AC0-95CA-5EA31A74B7AC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12405DF3-6012-4ED7-BA0C-7E8A4F336CB1}
+	EndGlobalSection
+EndGlobal
