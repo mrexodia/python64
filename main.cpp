@@ -29,19 +29,18 @@ int CALLBACK WinMain(
     lstrcatW(szCommandLine, EXECUTABLE);
     auto cmdLine = GetCommandLineW();
     const wchar_t* start = GetCommandLineW();
-#define check(x) if(!*x) __debugbreak()
     if(*start == L'\"')
         do
         {
             start++;
-            check(start);
+            if(!*start)
+                __debugbreak();
         } while(*start != '\"');
     else
-        for(; *start != ' '; start++)
-            check(start);
-    start++;
-    check(start);
-#undef check
+        while(*start != ' ' && *start != '\0')
+            start++;
+    if(*start == ' ')
+        start++;
     lstrcatW(szCommandLine, start);
     STARTUPINFOW si;
     RtlSecureZeroMemory(&si, sizeof(si));
