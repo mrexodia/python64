@@ -56,5 +56,5 @@ int CALLBACK WinMain(
     }
     else
         error(szCommandLine);
-    return ExitCode;
+    ExitProcess(ExitCode);
 }
